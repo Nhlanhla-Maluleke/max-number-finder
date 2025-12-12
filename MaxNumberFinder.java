@@ -14,7 +14,7 @@ public class MaxNumberFinder {
         int idx = 0; 
         list = new ArrayList<Integer>();
        do {
-            System.out.println("Enter the numbers:");
+            System.out.println("Enter the number "+(idx+1)+":");
             int i = input.nextInt();
             list.add(i);
             idx++;
@@ -24,6 +24,10 @@ public class MaxNumberFinder {
     }
 //The method that calculates the maximum number between any given numbers
     static int max(ArrayList<Integer> list){
+        //Add an exception so that the programme does not crash
+        if (list == null || list.isEmpty()) {
+            throw new IllegalArgumentException("List cannot be null or empty");
+        }
         int maxValue = list.get(0);
         for (int i = 1; i < list.size(); i++) {
           if(list.get(i)>maxValue){
