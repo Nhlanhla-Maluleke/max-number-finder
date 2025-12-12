@@ -1,5 +1,10 @@
+
+# Number Analyzer 🔢
+(Previously: Maximum Number Finder)
+
+Now finds: Maximum, Minimum, and Average of numbers!
 Files Included
-MaxNumberFinder.java
+Number Analyzer
 - Description: Java file containing:
 - Method of finding the maximum number for any number of given numbers
 - Comments and explanations throughout
