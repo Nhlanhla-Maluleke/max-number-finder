@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**Side project of finding the maximum number of the given numbers by user
@@ -20,6 +21,7 @@ public class MaxNumberFinder {
             idx++;
         }while(k>idx);
         System.out.println("Maximum number: "+max(list));
+        input.close();
         
     }
 //The method that calculates the maximum number between any given numbers
@@ -28,13 +30,7 @@ public class MaxNumberFinder {
         if (list == null || list.isEmpty()) {
             throw new IllegalArgumentException("List cannot be null or empty");
         }
-        int maxValue = list.get(0);
-        for (int i = 1; i < list.size(); i++) {
-          if(list.get(i)>maxValue){
-            maxValue = list.get(i);
-          }
-        }
-        return maxValue;
+         return Collections.max(list); // Built-in Java method
 
     }
 
